@@ -16,6 +16,8 @@
       <div class="wrapper">
          <div class="title">
              <h1>Web fusion</h1>
+             <input type="text" id="codeInput" placeholder="Enter code">
+             <button onclick="checkCode()">Submit</button>
          </div>
          <div class="count-down">
             <div class="timer min">
@@ -52,7 +54,7 @@
          const sec = document.querySelector(".sec .numb");
          var timer = setInterval(()=>{
            var currentDate = new Date().getTime();
-           var launchDate = new Date('Aug 30, 2023 13:00:00').getTime();
+           var launchDate = new Date('sept 15, 2023 13:00:00').getTime();
            var duration = launchDate - currentDate;
         
            var minutes = Math.floor((duration % (1000 * 60 * 60)) / (1000 * 60));
@@ -71,6 +73,16 @@
              clearInterval(timer);
            }
          }, 1000);
+
+         function checkCode() {
+  if (codeInput.value === '1234') { 
+    clearInterval(timer);
+    min.innerHTML = minutes;
+    sec.innerHTML = seconds;
+  } else {
+    alert('Incorrect code. Try again.');
+  }
+}
       </script>
    </body>
 </html>
