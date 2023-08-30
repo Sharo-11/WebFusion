@@ -199,8 +199,8 @@ Array.prototype.last = function () {
   
     switch (phase) {
       case "waiting":
-          if(score > 5 ){
-            window.location = "./level2.html"
+          if(score > 4 ){
+            window.location = "../../web_pages/web1/first.html"
           }
           else{
             return;
