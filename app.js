@@ -21,8 +21,8 @@ var timer = setInterval(()=>{
   if(seconds < 10){
     sec.innerHTML = '0' + seconds;
   }
-  if(milisec < 100){
-    mili.innerHTML = milisec;
+  if(milisec < 10){
+    mili.innerHTML = '0' + milisec;
   }
   if(duration < 0){
     clearInterval(timer);
@@ -30,7 +30,7 @@ var timer = setInterval(()=>{
 }, 10);
 
 function checkCode() {
-    console.log(codeInput.value)
+    console.log(codeInput.value);
 if (codeInput.value === '1234') { 
     alert('Passcode matched');
 clearInterval(timer);
