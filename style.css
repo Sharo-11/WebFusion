@@ -1,143 +1,145 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@font-face {
+  font-family: "Game";
+  src: url("./fonts/ghostclan.ttf");
+}
+
 *{
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Game";
 }
 
-h1{
-    font-weight: 300;
-}
-
-html,body{
+body{
   display: grid;
-  height: 100%;
-  width: 100%;
   place-items: center;
-  background: url("bg.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
 }
-::selection{
-  color: #fff;
-  background: #FC4782;
-}
-.wrapper{
-  color: #fff;
-  max-width: 900px;
-  text-align: center;
-  padding: 0 50px;
-}
-.wrapper .title{
-  font-size: 35px;
-  font-weight: 500;
-}
-.wrapper .title span{
-  font-weight: 700;
-}
-.wrapper form{
-  margin: 50px 0;
-}
-.wrapper form .email-field{
-  height: 50px;
+
+.container{   
+  display: grid;
+  place-items: center;
+  position: relative;
   width: 100%;
+  height: 100vh;
+  z-index: 0;  
+  overflow: hidden;
+}
+
+.start{
+  left: 50%;
+}
+
+.bg-img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay {
+  z-index: 9;
+  /* margin: 30px; */
+  /* background: #009938; */
+}
+
+svg{
+  font-size: 100px;
+  padding-top: 0.5rem;
+}
+
+.copy{
+  fill: none;
+  stroke: #921E66;
+  stroke-width: 3px;
+  stroke-dasharray: 8% 30%;
+  stroke-dashoffset: 0%;
+  animation: line-anim 5s ease-in-out infinite;
+}
+
+.copy1{
+  stroke:rgb(75, 65, 219);
+  animation-delay: 1s;
+}
+.copy2{
+  stroke:#921E66;
+  animation-delay: 2s;
+}
+.copy3{
+  stroke:rgb(74, 44, 181);
+  animation-delay: 3s;
+}
+.copy4{
+  stroke:rgb(239, 35, 130);
+  animation-delay: 4s;
+}
+.copy5{
+  stroke:rgb(252, 251, 251);
+  animation-delay: 5s;
+}
+
+
+.bg-img img{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.centered-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -60px;
+  
+}
+
+.input-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  margin-top: 30px;
 }
-form .email-field input{
-  width: 100%;
-  height: 100%;
-  padding-left: 20px;
+
+.red-btn{
+  background-color: red;
+  padding: 10px 20px;
+  color: white;
   border: none;
-  outline: none;
-  font-size: 18px;
-}
-form .email-field button{
-  height: 100%;
-  width: 200px;
-  outline: none;
-  border: none;
-  background: #FC4782;
-  color: #fff;
-  font-size: 20px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
-form .email-field button:hover{
-  background: #000;
+
+.input-field {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px; 
 }
-.wrapper .count-down{
+
+.button {
+  padding: 10px 20px;
+  background-color: #009938; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.count-down {
+  padding: 0rem 5rem;
   display: flex;
-  width: 100%;
-  height: 100px;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
+  font-family: "Game";
+  font-size: 5rem;
+  color: white;
+  position: absolute;
+  bottom: 250px; 
+  left: 50%;
+  transform: translateX(-50%); 
+  z-index: 10; 
 }
-.wrapper .count-down .timer{
-  height: 100%;
-  width: 100px;
-  border: 2px solid;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.count-down .timer .numb{
-  font-size: 25px;
-  font-weight: 500;
-}
-.count-down .timer .text{
-  font-size: 15px;
-}
-.count-down .clone{
-  font-size: 45px;
-}
-@media (max-width: 630px) {
-  .wrapper .count-down{
-    height: 80px;
-  }
-  .wrapper .count-down .timer{
-    width: 80px;
-  }
-  .count-down .timer .numb{
-    font-size: 20px;
-  }
-  .count-down .timer .text{
-    font-size: 13px;
-  }
-  .count-down .clone{
-    font-size: 40px;
-  }
-}
-@media (max-width: 542px){
-  .wrapper{
-    padding: 0 20px;
-  }
-  .wrapper .count-down .timer{
-    border: none;
-  }
-  .count-down .timer .numb{
-    font-size: 28px;
-  }
-  .count-down .timer .text{
-    font-size: 15px;
-  }
-  .count-down .clone{
-    display: none;
-  }
-  .form .email-field button{
-    width: 150px;
-    font-size: 17px;
-  }
-}
-@media (max-width: 340px){
-  .wrapper .count-down{
-    height: 30px;
-  }
-  .wrapper .count-down .timer{
-    width: 30px;
+
+
+@keyframes line-anim {
+  100%{
+      stroke-dashoffset: -35%;
   }
 }
