@@ -9,7 +9,7 @@ var timer = setInterval(()=>{
   var minutes = Math.floor((duration % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((duration % (1000 * 60)) / 1000);
   var milisec = Math.floor((duration % 1000)/10);
-  console.log(mili);
+//   console.log(mili);
 
   min.innerHTML = minutes;
   sec.innerHTML = seconds;

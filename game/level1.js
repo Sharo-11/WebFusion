@@ -200,7 +200,7 @@ Array.prototype.last = function () {
     switch (phase) {
       case "waiting":
           if(score > 4 ){
-            window.location = "../../web_pages/web1/first.html"
+            window.location.replace("../../web_pages/web1/first.html");
           }
           else{
             return;
