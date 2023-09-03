@@ -133,7 +133,7 @@ body {
     max-width: 420px;
     width: 100%;
     border-radius: 10px;
-    background: rgba(144, 43, 217, 0.532);
+    background: rgb(255, 255, 255);
     text-align: center;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
