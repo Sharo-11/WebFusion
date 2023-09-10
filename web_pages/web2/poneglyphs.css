@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    display: block;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    height: 7vh;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white; 
+    font-size: 22px;
+}
+
+.menu ul {
+    list-style-type: none; /* Remove bullet points from the list */
+}
+
+.menu li {
+    display: inline-block;
+    padding-top: 2vh;
+    padding-left: 40vh; 
+}
+
+.tools pre {
+    white-space: pre-wrap; /* Preserve line breaks and spacing */
+    background-color: #f4f4f4; 
+    padding: 10px; 
+    border: 1px solid #ccc; /* Optional: Add a border for visual separation */
+    font-family: 'Times New Roman','Courier New', monospace; 
+    font-size: 18px ;
+    text-align: center;
+  }
+  
